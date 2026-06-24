@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import ScrollRevealText from "@/components/ScrollRevealText";
-import Parallax from "@/components/Parallax";
 import GalleryGrid from "./GalleryGrid";
 
 export const metadata: Metadata = {
@@ -14,24 +12,37 @@ export default function Gallery() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[90vh] sm:h-screen flex items-center justify-center text-white overflow-hidden">
-        <Parallax speed={0.15}>
-          <Image
-            src="https://images.unsplash.com/photo-1762972921985-d77aaeb4630a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Edison Public School campus"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-forest/80" />
-        </Parallax>
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center text-white overflow-hidden bg-[#2d4a3e]">
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]" aria-hidden="true">
+          <svg viewBox="0 0 800 500" className="w-full h-full" fill="none" stroke="white" strokeWidth="1.2">
+            <rect x="200" y="150" width="180" height="140" rx="6" />
+            <circle cx="290" cy="220" r="35" />
+            <circle cx="290" cy="220" r="20" />
+            <circle cx="290" cy="220" r="8" fill="white" fillOpacity="0.2" />
+            <rect x="215" y="160" width="30" height="15" rx="2" />
+            <circle cx="370" cy="170" r="5" fill="white" fillOpacity="0.3" />
+            <rect x="420" y="180" width="180" height="130" rx="4" />
+            <line x1="420" y1="200" x2="600" y2="200" strokeWidth="0.6" />
+            <line x1="420" y1="220" x2="580" y2="220" strokeWidth="0.6" />
+            <line x1="420" y1="240" x2="560" y2="240" strokeWidth="0.6" />
+            <path d="M440,270 L480,250 L520,270 L560,260 L590,280" strokeWidth="0.8" />
+            <circle cx="540" cy="195" r="12" strokeWidth="0.8" />
+            <path d="M150,350 L250,350 L250,400 L150,400 Z" strokeWidth="0.8" />
+            <path d="M160,360 L240,360 L240,390 L160,390 Z" strokeWidth="0.6" />
+            <path d="M550,350 L650,350 L650,400 L550,400 Z" strokeWidth="0.8" />
+            <circle cx="600" cy="375" r="15" strokeWidth="0.6" />
+            <path d="M590,370 L600,360 L610,370 L610,385 L590,385 Z" strokeWidth="0.6" />
+          </svg>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
         <div className="relative z-10 text-center px-4 max-w-[1200px] mx-auto">
           <FadeIn>
-            <ScrollRevealText as="h1" className="font-display text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-6">
+            <ScrollRevealText as="h1" className="font-display text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.95] mb-4">
               Life at<br />
               <span className="text-terracotta">Edison</span>
             </ScrollRevealText>
-            <div className="w-16 h-[2px] bg-terracotta mx-auto mb-6" />
-            <p className="font-body text-base sm:text-xl text-white/70 max-w-lg mx-auto">
+            <div className="w-12 h-[2px] bg-terracotta mx-auto mb-4" />
+            <p className="font-body text-sm sm:text-base md:text-lg text-white/70 max-w-md mx-auto">
               Memories and moments from our vibrant campus.
             </p>
           </FadeIn>

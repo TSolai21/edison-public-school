@@ -136,34 +136,8 @@ export default function Home() {
         <Parallax speed={0.15}>
           <HeroSlider />
         </Parallax>
-        <div className="absolute inset-0 bg-gradient-to-br from-[#2d4a3e]/80 via-[#2d4a3e]/60 to-[#1a1f16]/70 z-[1]" />
-        {/* Decorative SVG pattern */}
-        <div className="absolute inset-0 z-[2] pointer-events-none opacity-[0.03]" aria-hidden="true">
-          <svg className="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <pattern id="heroGrid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
-                <circle cx="30" cy="30" r="1" fill="white" />
-                <path d="M30,0 L30,60 M0,30 L60,30" stroke="white" strokeWidth="0.3" opacity="0.5" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#heroGrid)" />
-          </svg>
-        </div>
-        {/* Floating decorative circles */}
-        <div className="absolute top-[15%] left-[8%] z-[2] pointer-events-none" aria-hidden="true">
-          <svg className="w-16 h-16 sm:w-24 sm:h-24 text-[#c45d3e] opacity-20 animate-float-slow" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5">
-            <circle cx="50" cy="50" r="40" />
-            <circle cx="50" cy="50" r="25" />
-            <circle cx="50" cy="50" r="10" />
-          </svg>
-        </div>
-        <div className="absolute bottom-[20%] right-[6%] z-[2] pointer-events-none" aria-hidden="true">
-          <svg className="w-12 h-12 sm:w-20 sm:h-20 text-[#d4c5a9] opacity-15 animate-float" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.5">
-            <rect x="20" y="20" width="60" height="60" transform="rotate(45 50 50)" />
-            <rect x="30" y="30" width="40" height="40" transform="rotate(45 50 50)" />
-          </svg>
-        </div>
-        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-8">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-[1]" />
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-8" style={{ textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
           <FadeIn direction="left">
             <p className="text-[10px] sm:text-xs tracking-[0.25em] uppercase mb-4 sm:mb-6 text-[#d4c5a9] font-medium">
               Est. 2014 &mdash; Puthiamputhur, Tamil Nadu
@@ -289,7 +263,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRINCIPAL */}
+      {/* CORRESPONDENT */}
       <section className="py-20 sm:py-28 bg-[#f5f0e8] overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-5 sm:px-8">
           <div className="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
@@ -297,8 +271,8 @@ export default function Home() {
               <div className="relative aspect-[4/3] overflow-hidden shadow-2xl">
                 <Parallax speed={0.08}>
                   <Image
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                    alt="Principal"
+                    src="/Correspondent.jpg"
+                    alt="Correspondent"
                     fill
                     className="object-cover"
                   />
@@ -311,7 +285,7 @@ export default function Home() {
                   Leadership
                 </p>
                 <ScrollRevealText as="h2" className="text-3xl sm:text-4xl md:text-5xl font-display text-[#1a1f16] mb-5 sm:mb-8 leading-tight">
-                  Principal&apos;s
+                  Correspondent&apos;s
                   <br />
                   Message
                 </ScrollRevealText>
@@ -327,10 +301,10 @@ export default function Home() {
                 </p>
                 <div>
                   <p className="font-semibold text-[#1a1f16] text-base sm:text-lg font-body">
-                    Dr. Lakshmi Narayanan
+                    Anbu Edison
                   </p>
                   <p className="text-[#8a8178] text-xs sm:text-sm font-body">
-                    Ph.D. in Education | 20+ Years Experience
+                    Correspondent | Edison Public School
                   </p>
                 </div>
               </div>

@@ -1,7 +1,5 @@
 import FadeIn from "@/components/FadeIn";
 import ScrollRevealText from "@/components/ScrollRevealText";
-import Parallax from "@/components/Parallax";
-import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { MapPin, Phone, Envelope } from "@/components/icons";
 
@@ -35,24 +33,36 @@ export default function Contact() {
       />
 
       {/* HERO */}
-      <section className="relative h-[90vh] sm:h-screen flex items-center justify-center text-white overflow-hidden">
-        <Parallax speed={0.15}>
-          <Image
-            src="https://images.unsplash.com/photo-1762972921985-d77aaeb4630a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Edison Public School campus"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-forest/80" />
-        </Parallax>
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center text-white overflow-hidden bg-[#2d4a3e]">
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]" aria-hidden="true">
+          <svg viewBox="0 0 800 500" className="w-full h-full" fill="none" stroke="white" strokeWidth="1.2">
+            <rect x="250" y="160" width="300" height="200" rx="4" />
+            <path d="M250,160 L400,280 L550,160" strokeWidth="0.8" />
+            <path d="M250,360 L350,260" strokeWidth="0.6" />
+            <path d="M550,360 L450,260" strokeWidth="0.6" />
+            <circle cx="400" cy="400" r="25" strokeWidth="0.8" />
+            <path d="M390,395 L400,385 L410,395 L410,410 L390,410 Z" fill="white" fillOpacity="0.2" strokeWidth="0.6" />
+            <path d="M150,200 Q150,150 200,130 Q250,150 250,200" strokeWidth="0.8" />
+            <line x1="200" y1="130" x2="200" y2="100" strokeWidth="0.8" />
+            <circle cx="200" cy="90" r="10" strokeWidth="0.8" />
+            <path d="M550,200 Q550,150 600,130 Q650,150 650,200" strokeWidth="0.8" />
+            <line x1="600" y1="130" x2="600" y2="100" strokeWidth="0.8" />
+            <circle cx="600" cy="90" r="10" strokeWidth="0.8" />
+            <path d="M300,420 L500,420" strokeWidth="0.6" />
+            <circle cx="350" cy="430" r="3" fill="white" fillOpacity="0.3" strokeWidth="0" />
+            <circle cx="400" cy="430" r="3" fill="white" fillOpacity="0.3" strokeWidth="0" />
+            <circle cx="450" cy="430" r="3" fill="white" fillOpacity="0.3" strokeWidth="0" />
+          </svg>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
         <div className="relative z-10 text-center px-4 max-w-[1200px] mx-auto">
           <FadeIn>
-            <ScrollRevealText as="h1" className="font-display text-white text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-6">
+            <ScrollRevealText as="h1" className="font-display text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.95] mb-4">
               Let&apos;s<br />
               <span className="text-terracotta">Connect</span>
             </ScrollRevealText>
-            <div className="w-16 h-[2px] bg-terracotta mx-auto mb-6" />
-            <p className="font-body text-base sm:text-xl text-white/70 max-w-lg mx-auto">
+            <div className="w-12 h-[2px] bg-terracotta mx-auto mb-4" />
+            <p className="font-body text-sm sm:text-base md:text-lg text-white/70 max-w-md mx-auto">
               We&apos;d love to hear from you. Reach out anytime.
             </p>
           </FadeIn>

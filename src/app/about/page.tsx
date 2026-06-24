@@ -36,25 +36,35 @@ export default function About() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[90vh] sm:h-screen flex items-center justify-center text-white overflow-hidden">
-        <Parallax speed={0.15}>
-          <Image
-            src="https://images.unsplash.com/photo-1762972921985-d77aaeb4630a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Edison Public School campus"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-[#2d4a3e]/90 via-[#2d4a3e]/70 to-[#1a1f16]/80" />
-        </Parallax>
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center text-white overflow-hidden bg-[#2d4a3e]">
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]" aria-hidden="true">
+          <svg viewBox="0 0 800 500" className="w-full h-full" fill="none" stroke="white" strokeWidth="1.2">
+            <rect x="280" y="180" width="240" height="180" rx="2" />
+            <rect x="310" y="210" width="50" height="60" rx="1" />
+            <rect x="440" y="210" width="50" height="60" rx="1" />
+            <rect x="370" y="300" width="60" height="60" rx="1" />
+            <polygon points="280,180 400,100 520,180" />
+            <rect x="390" y="80" width="4" height="30" />
+            <polygon points="394,80 420,90 394,100" fill="white" fillOpacity="0.3" />
+            <line x1="200" y1="360" x2="600" y2="360" strokeWidth="0.8" />
+            <circle cx="160" cy="280" r="50" strokeWidth="0.8" />
+            <circle cx="160" cy="240" r="40" strokeWidth="0.8" />
+            <line x1="160" y1="330" x2="160" y2="400" strokeWidth="1" />
+            <circle cx="640" cy="300" r="35" strokeWidth="0.8" />
+            <circle cx="640" cy="270" r="28" strokeWidth="0.8" />
+            <line x1="640" y1="335" x2="640" y2="400" strokeWidth="1" />
+          </svg>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
         <div className="relative z-10 text-center px-4 max-w-[1200px] mx-auto">
           <FadeIn>
-            <ScrollRevealText as="h1" className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] mb-6">
+            <ScrollRevealText as="h1" className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.95] mb-4">
               A School Built
               <br />
               on <span className="text-terracotta">Belief</span>
             </ScrollRevealText>
-            <div className="w-16 h-[1px] bg-terracotta mx-auto mb-6" />
-            <p className="font-body text-base sm:text-lg md:text-xl text-white/70 max-w-lg mx-auto font-light tracking-wide">
+            <div className="w-12 h-[1px] bg-terracotta mx-auto mb-4" />
+            <p className="font-body text-sm sm:text-base md:text-lg text-white/70 max-w-md mx-auto font-light tracking-wide">
               A legacy of educational excellence in the heart of Puthiamputhur.
             </p>
           </FadeIn>
@@ -87,7 +97,7 @@ export default function About() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Parallax speed={0.08}>
                   <Image
-                    src="https://images.unsplash.com/photo-1762972921985-d77aaeb4630a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                    src="/school3.webp"
                     alt="Edison Public School campus"
                     fill
                     className="object-cover"

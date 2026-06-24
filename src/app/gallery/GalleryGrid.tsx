@@ -17,35 +17,35 @@ const groups: GalleryGroup[] = [
   {
     title: "Academics & Classroom",
     images: [
-      { src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Students studying" },
-      { src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Students in classroom" },
-      { src: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Science lab" },
+      { src: "/school1.webp", alt: "Students studying" },
+      { src: "/school2.webp", alt: "Students in classroom" },
+      { src: "/school3.webp", alt: "Science lab" },
     ],
   },
   {
     title: "Campus & Infrastructure",
     images: [
-      { src: "https://images.unsplash.com/photo-1762972921985-d77aaeb4630a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "School building" },
-      { src: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Modern library interior" },
+      { src: "/school4.webp", alt: "School building" },
+      { src: "/school5.webp", alt: "Campus view" },
     ],
   },
   {
     title: "Sports & Athletics",
     images: [
-      { src: "https://images.unsplash.com/photo-1662065932069-f285d5dc7df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Basketball game" },
-      { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Sports field" },
+      { src: "/school6.webp", alt: "Sports activities" },
+      { src: "/school1.webp", alt: "Sports field" },
     ],
   },
   {
     title: "Library & Resources",
     images: [
-      { src: "https://images.unsplash.com/photo-1763811938053-2e88eba977a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Modern library" },
+      { src: "/school2.webp", alt: "Library" },
     ],
   },
   {
     title: "Cultural Events",
     images: [
-      { src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80", alt: "Cultural event" },
+      { src: "/school3.webp", alt: "Cultural event" },
     ],
   },
 ];

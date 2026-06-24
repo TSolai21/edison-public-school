@@ -3,22 +3,12 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const slides = [
-  {
-    src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    alt: "School Campus",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    alt: "Students Learning",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    alt: "Smart Classroom",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
-    alt: "Sports Ground",
-  },
+  { src: "/school1.webp", alt: "Edison Public School Campus" },
+  { src: "/school2.webp", alt: "Students Learning" },
+  { src: "/school3.webp", alt: "Smart Classroom" },
+  { src: "/school4.webp", alt: "School Facilities" },
+  { src: "/school5.webp", alt: "Sports Ground" },
+  { src: "/school6.webp", alt: "School Activities" },
 ];
 
 const INTERVAL = 5000;

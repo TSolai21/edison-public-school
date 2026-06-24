@@ -1,6 +1,5 @@
 import FadeIn from "@/components/FadeIn";
 import ScrollRevealText from "@/components/ScrollRevealText";
-import Parallax from "@/components/Parallax";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -71,16 +70,27 @@ export default function Classes() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[90vh] sm:h-screen flex items-center justify-center text-white overflow-hidden">
-        <Parallax speed={0.15}>
-          <Image
-            src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Students activities"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-forest/80" />
-        </Parallax>
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center text-white overflow-hidden bg-[#2d4a3e]">
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]" aria-hidden="true">
+          <svg viewBox="0 0 800 500" className="w-full h-full" fill="none" stroke="white" strokeWidth="1.2">
+            <circle cx="250" cy="250" r="60" />
+            <path d="M220,220 Q250,200 280,220 Q300,250 280,280 Q250,300 220,280 Q200,250 220,220" strokeWidth="0.8" />
+            <line x1="250" y1="190" x2="250" y2="310" strokeWidth="0.6" />
+            <line x1="190" y1="250" x2="310" y2="250" strokeWidth="0.6" />
+            <circle cx="550" cy="220" r="45" />
+            <path d="M530,200 L550,180 L570,200" strokeWidth="0.8" />
+            <line x1="550" y1="180" x2="550" y2="160" strokeWidth="0.8" />
+            <path d="M520,240 Q550,260 580,240" strokeWidth="0.8" />
+            <rect x="400" y="280" width="60" height="80" rx="3" strokeWidth="0.8" />
+            <path d="M415,300 Q430,290 445,300 Q450,310 445,320 Q430,330 415,320 Q410,310 415,300" strokeWidth="0.6" />
+            <circle cx="150" cy="350" r="30" strokeWidth="0.8" />
+            <path d="M140,340 L160,360 M160,340 L140,360" strokeWidth="0.6" />
+            <path d="M650,300 Q670,280 690,300 Q700,330 680,350 Q660,360 640,340 Q630,310 650,300" strokeWidth="0.8" />
+            <line x1="670" y1="280" x2="670" y2="260" strokeWidth="0.8" />
+            <circle cx="670" cy="255" r="5" fill="white" fillOpacity="0.2" strokeWidth="0.6" />
+          </svg>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
         {/* Organic SVG wave transition */}
         <div className="absolute bottom-0 left-0 right-0 z-10" aria-hidden="true">
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-20 sm:h-32">
@@ -89,12 +99,12 @@ export default function Classes() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-[1200px] mx-auto">
           <FadeIn>
-            <ScrollRevealText as="h1" className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9]">
+            <ScrollRevealText as="h1" className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.9]">
               Beyond
               <br />
               <span className="text-terracotta">The Classroom</span>
             </ScrollRevealText>
-            <p className="text-base sm:text-xl md:text-2xl text-cream/80 max-w-xl mx-auto font-light mt-4 sm:mt-6">
+            <p className="text-sm sm:text-base md:text-lg text-cream/80 max-w-md mx-auto font-light mt-2 sm:mt-3">
               9+ activities that build character, confidence, and leadership.
             </p>
           </FadeIn>

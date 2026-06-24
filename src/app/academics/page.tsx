@@ -3,6 +3,7 @@ import ScrollRevealText from "@/components/ScrollRevealText";
 import StatsCounter from "@/components/StatsCounter";
 import Parallax from "@/components/Parallax";
 import Image from "next/image";
+import WhenVisible from "@/components/WhenVisible";
 import Link from "next/link";
 import { AcademicCap, BookOpen, Flask, Trophy, Star } from "@/components/icons";
 
@@ -67,16 +68,28 @@ export default function Academics() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-[90vh] sm:h-screen flex items-center justify-center text-white overflow-hidden">
-        <Parallax speed={0.15}>
-          <Image
-            src="https://images.unsplash.com/photo-1762972921985-d77aaeb4630a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
-            alt="Edison Public School classroom"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-forest/80" />
-        </Parallax>
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center justify-center text-white overflow-hidden bg-[#2d4a3e]">
+        <div className="absolute inset-0 flex items-center justify-center opacity-[0.08]" aria-hidden="true">
+          <svg viewBox="0 0 800 500" className="w-full h-full" fill="none" stroke="white" strokeWidth="1.2">
+            <path d="M300,350 Q300,200 400,150 Q500,200 500,350" />
+            <line x1="400" y1="150" x2="400" y2="380" strokeWidth="1" />
+            <path d="M300,350 Q400,320 500,350" />
+            <circle cx="400" cy="130" r="15" />
+            <path d="M350,200 L400,170 L450,200" strokeWidth="0.8" />
+            <rect x="150" y="250" width="80" height="110" rx="2" strokeWidth="0.8" />
+            <line x1="165" y1="270" x2="215" y2="270" strokeWidth="0.6" />
+            <line x1="165" y1="285" x2="215" y2="285" strokeWidth="0.6" />
+            <line x1="165" y1="300" x2="200" y2="300" strokeWidth="0.6" />
+            <rect x="570" y="250" width="80" height="110" rx="2" strokeWidth="0.8" />
+            <line x1="585" y1="270" x2="635" y2="270" strokeWidth="0.6" />
+            <line x1="585" y1="285" x2="635" y2="285" strokeWidth="0.6" />
+            <line x1="585" y1="300" x2="620" y2="300" strokeWidth="0.6" />
+            <path d="M200,180 L230,150 L260,180" strokeWidth="0.8" />
+            <line x1="230" y1="150" x2="230" y2="120" strokeWidth="0.8" />
+            <polygon points="230,110 245,120 230,130 215,120" fill="white" fillOpacity="0.2" strokeWidth="0.6" />
+          </svg>
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
         {/* Organic SVG wave transition */}
         <div className="absolute bottom-0 left-0 right-0 z-10" aria-hidden="true">
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-20 sm:h-32">
@@ -85,12 +98,12 @@ export default function Academics() {
         </div>
         <div className="relative z-10 text-center px-4 max-w-[1200px] mx-auto">
           <FadeIn>
-            <ScrollRevealText as="h1" className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9]">
+            <ScrollRevealText as="h1" className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.9]">
               Academic
               <br />
               <span className="text-terracotta">Excellence</span>
             </ScrollRevealText>
-            <p className="text-base sm:text-xl md:text-2xl text-cream/80 max-w-xl mx-auto font-light mt-4 sm:mt-6">
+            <p className="text-sm sm:text-base md:text-lg text-cream/80 max-w-md mx-auto font-light mt-2 sm:mt-3">
               A rigorous CBSE curriculum designed to inspire intellectual
               curiosity and competitive exam success.
             </p>
@@ -117,8 +130,8 @@ export default function Academics() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Parallax speed={0.08}>
                   <Image
-                    src="https://images.unsplash.com/photo-1762972921985-d77aaeb4630a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                    alt="Students in classroom"
+                    src="/school4.webp"
+                    alt="Edison Public School campus"
                     fill
                     className="object-cover"
                   />
@@ -154,10 +167,10 @@ export default function Academics() {
         </div>
       </section>
 
-      {/* CURRICULUM */}
-      <section className="py-16 sm:py-24 bg-cream">
-        <div className="max-w-[1200px] mx-auto px-4">
-          <FadeIn className="mb-12 sm:mb-16">
+      {/* CURRICULUM — winding road */}
+      <section className="py-16 sm:py-28 bg-cream overflow-hidden">
+        <div className="max-w-[1100px] mx-auto px-4">
+          <FadeIn className="mb-16 sm:mb-24 text-center">
             <span className="text-terracotta font-body text-xs uppercase tracking-[0.2em] font-medium">
               Curriculum Pathway
             </span>
@@ -165,37 +178,77 @@ export default function Academics() {
               Five Stages of Growth
             </ScrollRevealText>
           </FadeIn>
-          <div className="space-y-0">
-            {stages.map((s, i) => (
-              <FadeIn key={s.num} delay={i * 80}>
-                <div className="group border-b border-sand hover:bg-ink transition-colors duration-500">
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 py-6 sm:py-8 px-4 sm:px-8">
-                    <div className="flex items-center gap-5 flex-shrink-0">
-                      <div className="w-12 h-12 flex items-center justify-center text-sand group-hover:text-white/40 transition-colors duration-500">
-                        <s.Icon className="w-6 h-6" />
+
+          <WhenVisible className="relative">
+            <svg
+              viewBox="0 0 100 900"
+              preserveAspectRatio="none"
+              className="absolute left-1/2 -translate-x-1/2 top-0 h-full w-[60px] sm:w-[80px]"
+              aria-hidden="true"
+            >
+              {/* Road shadow */}
+              <path
+                d="M50,20 C80,100 20,200 50,300 C80,400 20,500 50,600 C80,700 20,800 50,880"
+                fill="none"
+                stroke="#d4c5a9"
+                strokeWidth="8"
+                strokeLinecap="round"
+                opacity="0.3"
+              />
+              {/* Road surface */}
+              <path
+                id="academicsRoad"
+                d="M50,20 C80,100 20,200 50,300 C80,400 20,500 50,600 C80,700 20,800 50,880"
+                fill="none"
+                stroke="#d4c5a9"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeDasharray="8 6"
+              />
+              {/* Milestone dots on the road */}
+              {[20, 190, 360, 530, 700].map((cy, i) => (
+                <circle key={i} cx="50" cy={cy} r="6" fill="#f5f0e8" stroke="#c45d3e" strokeWidth="2.5" />
+              ))}
+            </svg>
+
+            {/* Milestone items */}
+            <div className="relative z-10 space-y-12 sm:space-y-0">
+              {stages.map((s, i) => {
+                const isLeft = i % 2 === 0;
+                return (
+                  <FadeIn key={s.num} delay={i * 150}>
+                    <div className={`relative sm:flex items-center sm:h-[160px] ${isLeft ? 'sm:flex-row' : 'sm:flex-row-reverse'}`}>
+                      {/* Content card */}
+                      <div className={`sm:w-[calc(50%-40px)] ${isLeft ? 'sm:pr-8 sm:text-right' : 'sm:pl-8 sm:text-left'}`}>
+                        <div className="group bg-white border border-sand/60 p-5 sm:p-6 hover:border-terracotta/40 hover:shadow-lg transition-all duration-500">
+                          <div className={`flex items-center gap-3 mb-2 ${isLeft ? 'sm:flex-row-reverse' : ''}`}>
+                            <div className="w-9 h-9 rounded-full bg-cream flex items-center justify-center flex-shrink-0 group-hover:bg-terracotta/10 transition-colors duration-500">
+                              <s.Icon className="w-4 h-4 text-sand group-hover:text-terracotta transition-colors duration-500" />
+                            </div>
+                            <div>
+                              <h3 className="font-display text-base sm:text-lg text-ink group-hover:text-terracotta transition-colors duration-500">
+                                {s.grade}
+                              </h3>
+                              <span className="text-stone text-xs font-medium tracking-wide uppercase">
+                                Grades {s.ages}
+                              </span>
+                            </div>
+                          </div>
+                          <p className="text-stone text-sm leading-relaxed">
+                            {s.desc}
+                          </p>
+                        </div>
                       </div>
-                      <span className="font-display text-4xl sm:text-5xl md:text-6xl text-sand group-hover:text-white/10 transition-colors duration-500">
-                        {s.num}
-                      </span>
+                      {/* Center spacer for the road */}
+                      <div className="hidden sm:block sm:w-[80px] flex-shrink-0" />
+                      {/* Other side spacer */}
+                      <div className="hidden sm:block sm:w-[calc(50%-40px)]" />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-baseline sm:gap-4 mb-1 sm:mb-2">
-                        <h3 className="font-display text-xl sm:text-2xl text-ink group-hover:text-white transition-colors duration-500">
-                          {s.grade}
-                        </h3>
-                        <span className="text-stone text-xs sm:text-sm font-medium tracking-wide uppercase group-hover:text-white/50 transition-colors duration-500">
-                          Grades {s.ages}
-                        </span>
-                      </div>
-                      <p className="text-stone text-sm sm:text-base leading-relaxed group-hover:text-white/70 transition-colors duration-500">
-                        {s.desc}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+                  </FadeIn>
+                );
+              })}
+            </div>
+          </WhenVisible>
         </div>
       </section>
 
